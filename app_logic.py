@@ -21,7 +21,12 @@ class CheckAndManagementScaling:
         self.min_consumers = queue_settings.get('min_quantity_consumers')
         self.max_consumers = queue_settings.get('max_quantity_consumers')
         self.default_consumers = queue_settings.get('default_quantity_consumers')
-        self.max_allowed_time = queue_settings.get('max_allowed_time')
+        ############
+        self._max_allowed_time = queue_settings.get('max_allowed_time')
+        self.max_allowed_time = self._max_allowed_time
+        self.messages = 0
+        self.consumers = 0
+        ############
         self.freq_check = queue_settings.get('freq_check')
         self.user = rabbit_settings.get('user')
         self.password = rabbit_settings.get('password')
@@ -48,11 +53,16 @@ class CheckAndManagementScaling:
                         # print(response['backing_queue_status'])
                     consumer_count = response.get('consumers')
                     message_count = response.get('messages')
+                    ############
+                    if message_count > self.messages:
+                        self.max_allowed_time = self._max_allowed_time
+                    self.messages = message_count
+                    ############
                     avg_rate_consumers = response.get('backing_queue_status').get('avg_egress_rate')
                     avg_rate_producers = response.get('backing_queue_status').get('avg_ingress_rate')
                     logger.info(
                         msg=f'Polling {self.rabbit_name_queue}, consumer_count={consumer_count}, message_count={message_count}')
-
+                    print(self.max_allowed_time)
                     #  Получаем рекомендованное количество консумеров
                     recommended_consumer_count = await self.calculation_consumers(consumer_count, message_count,
                                                                                   avg_rate_consumers,
@@ -77,17 +87,28 @@ class CheckAndManagementScaling:
         """
 
         if message_count == 0:
+            ############
+            self.max_allowed_time = self._max_allowed_time
             # return 1 or 0 or self.min_consumers
             logger.info(
                 f"name_queue={self.rabbit_name_queue}, consumer_count={consumer_count}, recommended_consumer_count=0")
             return 0
         elif consumer_count == 0:
+            self.max_allowed_time = self.max_allowed_time - self.freq_check
             logger.info(
                 f"name_queue={self.rabbit_name_queue}, consumer_count={consumer_count}, recommended_consumer_count={self.min_consumers}"
             )
             # or self.default_consumers
             return self.min_consumers
         else:
+            ############
+            self.max_allowed_time = self.max_allowed_time - self.freq_check
+            if self.max_allowed_time < 0:
+                logger.warning(
+                    f'the queue {self.rabbit_name_queue} was not released in the allowed time {self._max_allowed_time}'
+                )
+                self.max_allowed_time = self._max_allowed_time
+            ############
             coefficient_eff_consumers = avg_rate_consumers / avg_rate_producers  # коэффициент эффективности консумеров
             messages_execution_time = message_count / avg_rate_consumers  # время выполнения задач существующими консумерами
             if coefficient_eff_consumers > 1 and messages_execution_time < self.max_allowed_time:

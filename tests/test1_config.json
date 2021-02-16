@@ -5,7 +5,7 @@
             "min_quantity_consumers": 2,
             "max_quantity_consumers": 9,
             "default_quantity_consumers": 3,
-            "freq_check": 6,
+            "freq_check": 0,
             "max_allowed_time": 100
         }
     ],
