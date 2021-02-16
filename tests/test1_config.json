@@ -6,7 +6,7 @@
             "max_quantity_consumers": 9,
             "default_quantity_consumers": 3,
             "freq_check": 6,
-            "max_allowed_time": 20
+            "max_allowed_time": 100
         }
     ],
     "Rabbit": {

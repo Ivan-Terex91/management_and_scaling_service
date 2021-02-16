@@ -1,4 +1,30 @@
-{"asctime": "2021-02-16 10:32:18", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
-{"asctime": "2021-02-16 10:32:18", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
-{"asctime": "2021-02-16 10:32:18", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
-{"asctime": "2021-02-16 10:32:18", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=1"}
+{"asctime": "2021-02-16 14:07:43", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
+{"asctime": "2021-02-16 14:07:43", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 14:07:43", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 14:07:43", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=10, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 14:07:43", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=7"}
+{"asctime": "2021-02-16 14:07:43", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 14:07:54", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
+{"asctime": "2021-02-16 14:07:54", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 14:07:54", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 14:07:54", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=10, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 14:07:54", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=7"}
+{"asctime": "2021-02-16 14:07:54", "levelname": "WARNING", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=20, max_allowed_consumer_count=9"}
+{"asctime": "2021-02-16 14:08:25", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
+{"asctime": "2021-02-16 14:08:25", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 14:08:25", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 14:08:25", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=10, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 14:08:25", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=7"}
+{"asctime": "2021-02-16 14:08:25", "levelname": "WARNING", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=20, max_allowed_consumer_count=9"}
+{"asctime": "2021-02-16 14:08:33", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
+{"asctime": "2021-02-16 14:08:33", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 14:08:33", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 14:08:33", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=10, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 14:08:33", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=7"}
+{"asctime": "2021-02-16 14:08:33", "levelname": "WARNING", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=20, max_allowed_consumer_count=9"}
+{"asctime": "2021-02-16 14:09:14", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
+{"asctime": "2021-02-16 14:09:14", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 14:09:14", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 14:09:14", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=10, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 14:09:14", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=7"}
+{"asctime": "2021-02-16 14:09:14", "levelname": "WARNING", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=20, max_allowed_consumer_count=9"}
