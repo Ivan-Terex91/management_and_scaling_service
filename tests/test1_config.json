@@ -1,0 +1,19 @@
+{
+    "Queues": [
+        {
+            "name_queue": "queue3",
+            "min_quantity_consumers": 2,
+            "max_quantity_consumers": 9,
+            "default_quantity_consumers": 3,
+            "freq_check": 6,
+            "max_allowed_time": 20
+        }
+    ],
+    "Rabbit": {
+        "host": "127.0.0.1",
+        "port": 15672,
+        "user": "test",
+        "password": "test",
+        "vhost": "%2f"
+    }
+}

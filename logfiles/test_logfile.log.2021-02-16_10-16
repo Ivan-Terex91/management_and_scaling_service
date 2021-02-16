@@ -1,0 +1,25 @@
+{"asctime": "2021-02-16 10:16:47", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=0, message_count=100"}
+{"asctime": "2021-02-16 10:16:47", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 10:16:53", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=0, message_count=100"}
+{"asctime": "2021-02-16 10:16:53", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 10:16:59", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=2, message_count=97"}
+{"asctime": "2021-02-16 10:16:59", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=7"}
+{"asctime": "2021-02-16 10:17:05", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=3, message_count=91"}
+{"asctime": "2021-02-16 10:17:05", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=3, recommended_consumer_count=5"}
+{"asctime": "2021-02-16 10:17:11", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=3, message_count=91"}
+{"asctime": "2021-02-16 10:17:11", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=3, recommended_consumer_count=5"}
+{"asctime": "2021-02-16 10:17:17", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=5, message_count=81"}
+{"asctime": "2021-02-16 10:17:17", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 10:17:17", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=5, recommended_consumer_count=4"}
+{"asctime": "2021-02-16 10:17:23", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=5, message_count=55"}
+{"asctime": "2021-02-16 10:17:23", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 10:17:23", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=5, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 10:17:29", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=4, message_count=44"}
+{"asctime": "2021-02-16 10:17:29", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 10:17:29", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=4, recommended_consumer_count=2"}
+{"asctime": "2021-02-16 10:17:35", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=4, message_count=32"}
+{"asctime": "2021-02-16 10:17:35", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 10:17:35", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=4, recommended_consumer_count=1"}
+{"asctime": "2021-02-16 10:17:41", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=4, message_count=22"}
+{"asctime": "2021-02-16 10:17:41", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
+{"asctime": "2021-02-16 10:17:41", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=4, recommended_consumer_count=1"}
