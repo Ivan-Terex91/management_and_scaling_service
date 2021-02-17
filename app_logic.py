@@ -50,7 +50,7 @@ class CheckAndManagementScaling:
                             raise Exception(
                                 f"request to {self.url} returned with error; status code {response.status}, reason {response.reason}")
                         response = await response.json()
-                        # print(response['backing_queue_status'])
+                        print(response['backing_queue_status'])
                     consumer_count = response.get('consumers')
                     message_count = response.get('messages')
                     ############
@@ -62,7 +62,6 @@ class CheckAndManagementScaling:
                     avg_rate_producers = response.get('backing_queue_status').get('avg_ingress_rate')
                     logger.info(
                         msg=f'Polling {self.rabbit_name_queue}, consumer_count={consumer_count}, message_count={message_count}')
-                    print(self.max_allowed_time)
                     #  Получаем рекомендованное количество консумеров
                     recommended_consumer_count = await self.calculation_consumers(consumer_count, message_count,
                                                                                   avg_rate_consumers,

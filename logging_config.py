@@ -20,7 +20,7 @@ LOGGING_CONFIG = {
             'formatter': 'json_formatter',
             'class': "logging.handlers.TimedRotatingFileHandler",
             'filename': 'logfiles/test_logfile.log',
-            'when': 'M',  # Надо поменять потом подумаю на сколько
+            'when': 'H',  # Надо поменять потом подумаю на сколько
             'encoding': 'utf-8'
         },
     },

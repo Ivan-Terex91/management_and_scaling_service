@@ -1,4 +1,0 @@
-{"asctime": "2021-02-15 19:42:00", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
-{"asctime": "2021-02-15 19:42:00", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=2"}
-{"asctime": "2021-02-15 19:42:00", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, existing consumer count enough"}
-{"asctime": "2021-02-15 19:42:00", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=2, recommended_consumer_count=1"}

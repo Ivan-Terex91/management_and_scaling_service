@@ -1,6 +1,0 @@
-{"asctime": "2021-02-16 09:50:56", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=1, message_count=0"}
-{"asctime": "2021-02-16 09:50:56", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=1, recommended_consumer_count=0"}
-{"asctime": "2021-02-16 09:51:02", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=1, message_count=0"}
-{"asctime": "2021-02-16 09:51:02", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=1, recommended_consumer_count=0"}
-{"asctime": "2021-02-16 09:51:08", "levelname": "INFO", "name": "app_logger", "message": "Polling queue3, consumer_count=0, message_count=0"}
-{"asctime": "2021-02-16 09:51:08", "levelname": "INFO", "name": "app_logger", "message": "name_queue=queue3, consumer_count=0, recommended_consumer_count=0"}
