@@ -6,7 +6,7 @@
       "max_quantity_consumers": 9,
       "default_quantity_consumers": 3,
       "freq_check": 6,
-      "max_allowed_time": 75
+      "max_allowed_time": 300
     }
   ],
   "Rabbit": {
@@ -15,5 +15,9 @@
     "user": "test",
     "password": "test",
     "vhost": "%2f"
+  },
+  "Redis": {
+    "host": "127.0.0.1",
+    "port": 6379
   }
 }
