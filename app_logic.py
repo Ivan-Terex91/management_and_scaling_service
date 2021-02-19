@@ -63,9 +63,21 @@ class CheckAndManagementScaling:
                     message_count = response.get('messages')
 
                     ############
+                    # if message_count > self.messages:
+                    #     self.max_allowed_time = self._max_allowed_time
+                    # self.messages = message_count
+
                     if message_count > self.messages:
                         self.max_allowed_time = self._max_allowed_time
-                    self.messages = message_count
+                        #  Когда в очереди появляются новые сообщения (0 ---> N), то avg_rate_cons не совсем корректно
+                        #  использовать сразу
+                        if self.messages == 0 and consumer_count > 0:
+                            await asyncio.sleep(10)
+                            self.messages = message_count
+                            continue
+
+                    if message_count == 0:
+                        self.messages = message_count
                     ############
 
                     avg_rate_consumers = response.get('backing_queue_status').get('avg_egress_rate')
@@ -129,7 +141,8 @@ class CheckAndManagementScaling:
             quantity_values_speed_proc_cons += 1
             # Берём ср скорость одного консумера из rabbit
             avg_speed_proc_cons_in_rabbit = avg_rate_consumers / consumer_count
-            avg_speed_proc_cons = (sum_speed_cons_in_db + avg_speed_proc_cons_in_rabbit) / quantity_values_speed_proc_cons
+            avg_speed_proc_cons = (
+                                              sum_speed_cons_in_db + avg_speed_proc_cons_in_rabbit) / quantity_values_speed_proc_cons
 
             await self.write_data_in_redis(avg_speed_proc_cons, quantity_values_speed_proc_cons)
 
