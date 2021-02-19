@@ -28,7 +28,7 @@ class CheckAndManagementScaling:
         self._max_allowed_time = queue_settings.get('max_allowed_time')
         self.max_allowed_time = self._max_allowed_time
         self.messages = 0
-        # self.consumers = 0
+        self.consumers = 0
         ############
         # Параметры redis
         self.redis_host = redis_settings.get('host', '127.0.0.1')
@@ -84,9 +84,16 @@ class CheckAndManagementScaling:
 
             await asyncio.sleep(self.freq_check)
 
-    async def calculation_consumers(self, message_count, consumer_count, avg_rate_consumers,
-                                    avg_rate_producers):
-        """Метод рассчёта рекомендуемого количества консумеров"""
+    async def calculation_consumers(self, message_count: int, consumer_count: int, avg_rate_consumers: float,
+                                    avg_rate_producers: float):
+        """
+        Метод рассчёта рекомендуемого количества консумеров
+        :param message_count: количество сообщений в очереди
+        :param consumer_count: количество консумеров
+        :param avg_rate_consumers: средняя скорость обработки сообщений в очереди (сообщ/сек)
+        :param avg_rate_producers: средняя скорость поступление сообщений в очередь (сообщ/сек)
+        :return: recommended_consumer_count: рекомендумое количество консумеров
+        """
         if message_count == 0:
             self.max_allowed_time = self._max_allowed_time
             logger.info(
@@ -209,7 +216,7 @@ async def main():
     with open('test_config.json') as inf:
         settings = json.load(inf)
 
-    # Берём настройки Rabbit
+    # Берём настройки Rabbit и redis
     rabbit_settings = settings.get('Rabbit')
     redis_settings = settings.get('Redis')
     # Список экземпляров классов check_scaling (очередь-экземпляр)
@@ -226,6 +233,4 @@ async def main():
 
 
 if __name__ == '__main__':
-    # logging.config.dictConfig(LOGGING_CONFIG)
-    # logger = logging.getLogger('app_logger')
     asyncio.run(main())
