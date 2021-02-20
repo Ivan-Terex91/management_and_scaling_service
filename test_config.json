@@ -2,7 +2,7 @@
   "Queues": [
     {
       "name_queue": "queue3",
-      "min_quantity_consumers": 2,
+      "min_quantity_consumers": 1,
       "max_quantity_consumers": 9,
       "default_quantity_consumers": 3,
       "freq_check": 6,
@@ -12,8 +12,8 @@
   "Rabbit": {
     "host": "127.0.0.1",
     "port": 15672,
-    "user": "test",
-    "password": "test",
+    "user": "guest",
+    "password": "guest",
     "vhost": "%2f"
   },
   "Redis": {

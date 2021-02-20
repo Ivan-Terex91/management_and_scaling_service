@@ -1,4 +1,4 @@
-from app_logic import CheckAndManagementScaling
+from app_logic import CalculatingTheNeedScaling
 import asyncio
 import pytest
 
@@ -7,7 +7,7 @@ import pytest
 async def test_calculate_consumers(prepare_data):
     """Тест подсчёта числа рекоммендуемых консумеров"""
     data, queue_settings, rabbit_settings, redis_settings, expected_result = prepare_data
-    inst = CheckAndManagementScaling(queue_settings, rabbit_settings, redis_settings)
+    inst = CalculatingTheNeedScaling(queue_settings, rabbit_settings, redis_settings)
 
     task1 = asyncio.create_task(inst.calculation_consumers(consumer_count=data.get('consumer_count'),
                                                            message_count=data.get('message_count'),

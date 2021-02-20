@@ -2,9 +2,9 @@ import json
 
 """Подготовка данных для метода calculation_consumers"""
 
-# Обработка случая когда очередь пустая ---> return 0
+# Обработка случая когда очередь пустая ---> return минимальное количество
 data1 = {'consumer_count': 5, 'message_count': 0, 'avg_rate_consumers': 0, 'avg_rate_producers': 0}
-expected_result1 = 0
+expected_result1 = 2
 
 # Обработка случая когда сообщения есть и консумеров 0 ---> return 1
 data2 = {'consumer_count': 0, 'message_count': 50, 'avg_rate_consumers': 0, 'avg_rate_producers': 0}
